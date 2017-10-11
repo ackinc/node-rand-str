@@ -13,4 +13,5 @@ SYNOPSIS
 const rsg = require('random-string-gen');
 console.log(rsg(0)); //=> ""
 console.log(rsg(5)); //=> "3R8aE"
+console.log(rsg());  //=> throws TypeError
 ```
