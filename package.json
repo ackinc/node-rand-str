@@ -1,0 +1,11 @@
+{
+  "name": "random-string-generator",
+  "version": "1.0.0",
+  "description": "Generate a random alphanumeric string",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anirudh Nimmagadda",
+  "license": "ISC"
+}
