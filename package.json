@@ -4,8 +4,11 @@
   "description": "Generate a random alphanumeric string",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/nodeunit tests"
   },
   "author": "Anirudh Nimmagadda",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodeunit": "^0.11.1"
+  }
 }
