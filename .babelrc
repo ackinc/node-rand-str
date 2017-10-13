@@ -1,7 +1,9 @@
 {
     "presets": [
         ["env", {
-            "node": "0.10"
+            "targets": {
+                "node": "0.10"
+            }
         }]
     ],
     "plugins": [
