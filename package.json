@@ -4,12 +4,19 @@
   "description": "Generate a random alphanumeric string",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/nodeunit tests"
+    "test": "nodeunit dist/index.test.js",
+    "prebuild": "mkdirp dist",
+    "build": "babel index.js index.test.js -d dist",
+    "clean": "rimraf dist"
   },
   "author": "Anirudh Nimmagadda",
   "license": "ISC",
   "devDependencies": {
-    "nodeunit": "^0.11.1"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "mkdirp": "^0.5.1",
+    "nodeunit": "^0.11.1",
+    "rimraf": "^2.6.2"
   },
   "repository": {
     "type": "git",

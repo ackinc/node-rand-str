@@ -1,4 +1,4 @@
-const rsg = require('..');
+const rsg = require('./index');
 
 exports["Throws TypeError if arg cannot be converted to a number with unary+"] = test => {
     test.throws(() => rsg(), TypeError);
