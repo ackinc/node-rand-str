@@ -1,5 +1,5 @@
 {
-  "name": "rand-str",
+  "name": "@ack_inc/rand-str",
   "version": "1.0.0",
   "description": "Generate a random string of specified length, and satisfying specified constraints",
   "license": "MIT",
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ackinc/random-string-generator"
+    "url": "https://github.com/ackinc/node-rand-str"
   },
-  "bugs": "https://github.com/ackinc/random-string-generator/issues",
+  "bugs": "https://github.com/ackinc/node-rand-str/issues",
   "main": "index.js",
   "scripts": {
     "test": "jest"

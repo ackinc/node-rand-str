@@ -1,4 +1,4 @@
-# rand-str
+# node-rand-str
 
 Generate a random string (lower/upper alphabets, digits, symbols) of specified length,
 and satisfying the specified constraints
@@ -10,7 +10,7 @@ Main use case: password or temporary token generation
 ## Usage
 
 ```
-const rsg = require('rand-str');
+const rsg = require('@ack_inc/rand-str');
 console.log(rsg(<anything but a whole number>)); //=> throws TypeError
 console.log(rsg(0)); //=> ""
 console.log(rsg(5)); //=> "3`8aE"
