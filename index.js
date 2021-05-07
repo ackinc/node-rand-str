@@ -31,4 +31,9 @@ function generateRandomString(nChars, constraints = {}) {
   return retval.join("");
 }
 
+generateRandomString.lowercase = lowercase;
+generateRandomString.uppercase = uppercase;
+generateRandomString.digits = digits;
+generateRandomString.symbols = symbols;
+
 module.exports = generateRandomString;

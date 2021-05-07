@@ -22,7 +22,9 @@ console.log(rsg(5, { lowercase: true })); //=> "fewjk"
 # To Do
 
 - Tests
-- Docs
+- Docs (usage)
+- Specify support node version in package.json
+- Allow browser usage
 - Constraint: whitelisted chars
 - Constraint: blacklisted chars
 - Constraint: symbols that can be part of a url-component (See https://stackoverflow.com/questions/695438/what-are-the-safe-characters-for-making-urls)

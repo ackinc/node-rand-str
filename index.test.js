@@ -26,12 +26,36 @@ test("generated string is of specified length", () => {
 });
 
 test("generated string satisfies specified constraints", () => {
-  expect(rsg(6, { lowercase: true })).toMatch(/^[a-z]+$/);
-  expect(rsg(6, { uppercase: true })).toMatch(/^[A-Z]+$/);
-  expect(rsg(6, { digits: true })).toMatch(/^\d+$/);
+  expect(rsg(16, { lowercase: true })).toMatch(/^[a-z]+$/);
+  expect(rsg(16, { uppercase: true })).toMatch(/^[A-Z]+$/);
+  expect(rsg(16, { digits: true })).toMatch(/^\d+$/);
 
-  expect(rsg(6, { lowercase: true, uppercase: true })).toMatch(/^[A-Za-z]+$/);
-  expect(rsg(6, { lowercase: true, uppercase: true, digits: true })).toMatch(
+  // to ensure every allowed symbol is covered
+  const symbolsCovered = new Set();
+  do {
+    const s = rsg(16, { symbols: true });
+    expect(s).toMatch(charlistToRegex(rsg.symbols));
+    s.split("").forEach((sym) => symbolsCovered.add(sym));
+  } while (symbolsCovered.size < rsg.symbols.length);
+
+  expect(rsg(16, { lowercase: true, uppercase: true })).toMatch(/^[A-Za-z]+$/);
+  expect(rsg(16, { lowercase: true, uppercase: true, digits: true })).toMatch(
     /^[A-Za-z0-9]+$/
   );
+  expect(rsg(16, { lowercase: true, digits: true, symbols: true })).toMatch(
+    new RegExp(`^[a-z0-9${regexEscape(rsg.symbols)}]+$`)
+  );
 });
+
+function charlistToRegex(chars) {
+  const escaped = regexEscape(chars);
+  return new RegExp(`^[${escaped}]+$`);
+}
+
+function regexEscape(str) {
+  let tmp = str.replace(/\\/g, "\\\\");
+  if (tmp[0] === "^") tmp = tmp.replace(/\^/, "\\^");
+  tmp = tmp.replace(/]/g, "\\]");
+  tmp = tmp.replace(/-/g, "\\-");
+  return tmp;
+}
