@@ -21,9 +21,7 @@ console.log(rsg(5, { lowercase: true })); //=> "fewjk"
 
 # To Do
 
-- Tests
 - Docs (usage)
-- Specify support node version in package.json
 - Allow browser usage
 - Constraint: whitelisted chars
 - Constraint: blacklisted chars
