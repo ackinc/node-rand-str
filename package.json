@@ -1,6 +1,6 @@
 {
-  "name": "random-string-generator",
-  "version": "2.0.0",
+  "name": "rand-str",
+  "version": "1.0.0",
   "description": "Generate a random string of specified length, and satisfying specified constraints",
   "license": "MIT",
   "author": "Anirudh Nimmagadda <anirudh.nimmagadda@gmail.com>",
