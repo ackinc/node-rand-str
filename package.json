@@ -2,20 +2,33 @@
   "name": "random-string-generator",
   "version": "2.0.0",
   "description": "Generate a random string of specified length, and satisfying specified constraints",
+  "license": "MIT",
+  "author": "Anirudh Nimmagadda <anirudh.nimmagadda@gmail.com>",
+  "engines": {
+    "node": ">=12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ackinc/random-string-generator"
+  },
+  "bugs": "https://github.com/ackinc/random-string-generator/issues",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "author": "Anirudh Nimmagadda",
-  "license": "MIT",
   "devDependencies": {
     "eslint": "^7.25.0",
     "eslint-plugin-jest": "^24.3.6",
     "jest": "^26.6.3",
     "prettier": "^2.2.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ackinc/random-string-generator"
-  }
+  "keywords": [
+    "generate random",
+    "generate random string",
+    "generate random token",
+    "random string",
+    "random string generator",
+    "random token",
+    "random token generator"
+  ]
 }
