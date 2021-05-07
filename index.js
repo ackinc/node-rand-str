@@ -3,7 +3,11 @@ const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const digits = "1234567890";
 const symbols = "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/";
 
-function generateRandomString(nChars = 6, constraints = {}) {
+function generateRandomString(nChars, constraints = {}) {
+  if (typeof nChars !== "number" || nChars < 0 || nChars % 1 !== 0) {
+    throw new TypeError(`nChars must be a whole number`);
+  }
+
   const retval = [];
   let allowed = "";
 
