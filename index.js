@@ -1,16 +1,30 @@
-const CHARS = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789";
+const lowercase = "abcdefghijklmnopqrstuvwxyz";
+const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const digits = "1234567890";
+const symbols = "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/";
 
-// throws an error if len cannot be coerced to a number
-// NOTE: null and [] are coerced to 0 by unary+
-function GetRandomString (len) {
-  len = +len;
-  if (isNaN(len)) throw new TypeError(`Argument 'len' must be a number!`);
+function generateRandomString(nChars = 6, constraints = {}) {
+  const retval = [];
+  let allowed = "";
 
-  const n = CHARS.length;
+  if (Object.keys(constraints).length === 0) {
+    allowed = lowercase + uppercase + digits + symbols;
+  } else {
+    if (constraints.lowercase) allowed += lowercase;
+    if (constraints.uppercase) allowed += uppercase;
+    if (constraints.digits) allowed += digits;
+    if (constraints.symbols) allowed += symbols;
+  }
 
-  let ret = "";
-  for (let i = 0; i < len; i++) ret += CHARS[Math.floor(Math.random() * n)];
-  return ret;
+  if (allowed.length === 0) {
+    if (nChars === 0) return "";
+    throw new Error(`Cannot generate a string if no characters are allowed!`);
+  }
+
+  for (let i = 0; i < nChars; i++) {
+    retval.push(allowed[Math.floor(allowed.length * Math.random())]);
+  }
+  return retval.join("");
 }
 
-module.exports = GetRandomString;
+module.exports = generateRandomString;
