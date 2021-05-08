@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    commonjs: true,
+    browser: true,
     es2021: true,
     node: true,
     "jest/globals": true,
@@ -8,7 +8,8 @@ module.exports = {
   extends: "eslint:recommended",
   parserOptions: {
     ecmaVersion: 12,
+    sourceType: "module",
   },
-  plugins: ["jest"],
   rules: {},
+  plugins: ["jest"],
 };

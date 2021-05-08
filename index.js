@@ -1,7 +1,7 @@
-const lowercase = "abcdefghijklmnopqrstuvwxyz";
-const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const digits = "1234567890";
-const symbols = "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/";
+export const lowercase = "abcdefghijklmnopqrstuvwxyz";
+export const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+export const digits = "1234567890";
+export const symbols = "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/";
 
 function generateRandomString(nChars, constraints = {}) {
   if (typeof nChars !== "number" || nChars < 0 || nChars % 1 !== 0) {
@@ -31,9 +31,4 @@ function generateRandomString(nChars, constraints = {}) {
   return retval.join("");
 }
 
-generateRandomString.lowercase = lowercase;
-generateRandomString.uppercase = uppercase;
-generateRandomString.digits = digits;
-generateRandomString.symbols = symbols;
-
-module.exports = generateRandomString;
+export default generateRandomString;

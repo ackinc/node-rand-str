@@ -14,7 +14,7 @@
   "bugs": "https://github.com/ackinc/node-rand-str/issues",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "devDependencies": {
     "eslint": "^7.25.0",
@@ -30,5 +30,6 @@
     "random string generator",
     "random token",
     "random token generator"
-  ]
+  ],
+  "type": "module"
 }

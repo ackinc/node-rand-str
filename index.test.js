@@ -1,4 +1,4 @@
-const rsg = require(".");
+import rsg, { symbols } from "./index.js";
 
 it("throws a TypeError if specified length is not a whole number", () => {
   expect(() => rsg()).toThrow(TypeError);
@@ -34,16 +34,16 @@ test("generated string satisfies specified constraints", () => {
   const symbolsCovered = new Set();
   do {
     const s = rsg(16, { symbols: true });
-    expect(s).toMatch(charlistToRegex(rsg.symbols));
+    expect(s).toMatch(charlistToRegex(symbols));
     s.split("").forEach((sym) => symbolsCovered.add(sym));
-  } while (symbolsCovered.size < rsg.symbols.length);
+  } while (symbolsCovered.size < symbols.length);
 
   expect(rsg(16, { lowercase: true, uppercase: true })).toMatch(/^[A-Za-z]+$/);
   expect(rsg(16, { lowercase: true, uppercase: true, digits: true })).toMatch(
     /^[A-Za-z0-9]+$/
   );
   expect(rsg(16, { lowercase: true, digits: true, symbols: true })).toMatch(
-    new RegExp(`^[a-z0-9${regexEscape(rsg.symbols)}]+$`)
+    new RegExp(`^[a-z0-9${regexEscape(symbols)}]+$`)
   );
 });
 
