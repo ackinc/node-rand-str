@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "Anirudh Nimmagadda <anirudh.nimmagadda@gmail.com>",
   "engines": {
-    "node": ">=12"
+    "node": ">=12.17.0"
   },
   "repository": {
     "type": "git",
