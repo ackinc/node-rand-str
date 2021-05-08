@@ -7,6 +7,9 @@ If no constraints are specified, the library assumes all characters are allowed
 
 Main use case: password or temporary token generation
 
+Note: This version of the package uses ES6 imports/exports, and cannot be used by
+Node applications using commonjs
+
 ## Usage
 
 ```
