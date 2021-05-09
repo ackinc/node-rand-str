@@ -11,6 +11,8 @@ Main use case: password or temporary token generation
 
 As of 9 May 2021, this function has been subsumed into the [ack_inc/node-utils](https://github.com/ackinc/node-utils#readme) repo
 
+This package will no longer be updated
+
 ## Usage
 
 ```
@@ -50,7 +52,6 @@ If `constraints` is not provided or is empty, it is assumed that all characters 
 
 ## To Do
 
-- Browser usage
 - Constraint: whitelisted chars
 - Constraint: blacklisted chars
 - Constraint: symbols that can be part of a url-component (See https://stackoverflow.com/questions/695438/what-are-the-safe-characters-for-making-urls)
