@@ -7,6 +7,10 @@ If no constraints are specified, the library assumes all characters are allowed
 
 Main use case: password or temporary token generation
 
+## Deprecation Notice
+
+As of 9 May 2021, this function has been subsumed into the [ack_inc/node-utils](https://github.com/ackinc/node-utils#readme) repo
+
 ## Usage
 
 ```
