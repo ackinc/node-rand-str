@@ -9,7 +9,7 @@ Main use case: password or temporary token generation
 
 ## Deprecation Notice
 
-As of 9 May 2021, this function has been subsumed into the [ack_inc/node-utils](https://github.com/ackinc/node-utils#readme) repo
+As of 9 May 2021, this function has been subsumed into the [ack_inc/node-utils](https://www.npmjs.com/package/@ack_inc/utils) repo
 
 This package will no longer be updated
 
